@@ -40,11 +40,13 @@ return 0;
 }
 ```
 
-//type your code here
+
 
 
 Output:
+```
 ![image](https://github.com/user-attachments/assets/0fb6a71b-6873-4158-88d5-33791c236b02)
+```
 
 
 //paste your output here
@@ -88,17 +90,19 @@ return n.a+n.b;
 
 
 
-//type your code here
+
 
 
 
 
 Output:
+```
 ![image](https://github.com/user-attachments/assets/5014591d-f77b-4c80-be53-be314e9e6441)
+```
 
 
 
-//paste your output here
+
 
 
 
@@ -155,7 +159,9 @@ int main()
 
 
 Output:
+```
 ![image](https://github.com/user-attachments/assets/82d87975-bd0e-4e4f-abd6-b2474207a258)
+```
 
 
 
@@ -223,13 +229,15 @@ int main() {
 ```
 
 
-//type your code here
+
 
 
 
 
 Output:
+```
 ![image](https://github.com/user-attachments/assets/b6bd6b8f-1d8e-4819-9dc1-4bfeaa815cf8)
+```
 
 
 
@@ -314,13 +322,15 @@ int main()
 
 
 
-//type your code here
+
 
 
 
 
 Output:
+```
 ![image](https://github.com/user-attachments/assets/de7252dc-1c70-4b62-9606-b13ff8f5b7da)
+```
 
 
 
