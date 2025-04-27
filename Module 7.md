@@ -44,6 +44,8 @@ return 0;
 
 
 Output:
+![image](https://github.com/user-attachments/assets/0fb6a71b-6873-4158-88d5-33791c236b02)
+
 
 //paste your output here
 
