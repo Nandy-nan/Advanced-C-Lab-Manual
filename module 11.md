@@ -12,9 +12,41 @@ Algorithm:
 5.	Call the max_of_four function with the input integers and store the result in the greater variable
  
 Program:
+```
+#include<stdio.h>
+int max_of_four(int a,int b,int c,int d)
+{
+    if(a>b && a>c && a>d)
+    {
+        return a;  
+    }
+    else if(b>a && b>c && b>d)
+    {
+        return b;  
+    }
+    else if(c>a && c>b && c>d)
+    {
+        return c;        
+    }
+    else
+    {
+        return d;      
+    }    
+}
+int main()
+{
+    int n1,n2,n3,n4,greater;
+    scanf("%d%d%d%d",&n1,&n2,&n3,&n4); 
+    greater=max_of_four(n1,n2,n3,n4);
+    printf("%d",greater);
+}
+```
+
 //type your code here
 
 Output:
+![image](https://github.com/user-attachments/assets/f12abc4b-90cb-4383-81bc-73cb4c020696)
+
 //paste your output here
 
 Result:
@@ -36,9 +68,43 @@ Algorithm:
 7.	Call the calculate_the_max function with input values.
  
 Program:
+```
+#include<stdio.h>
+void calculate_the_max(int n,int k)
+{
+    int a=0,o=0,x=0;
+    for(int i=1;i<=n;i++)
+    {
+        for(int j=1+i;j<=n;j++)
+        {
+            if((i&j)>a && (i&j)<k)
+            {
+                a=i&j;              
+            }
+            if((i|j)>o && (i|j)<k)
+            {
+                o=i|j;      
+            }
+            if((i^j)>x && (i^j)<k)
+            {
+                x=i^j;     
+            }   
+        }
+}
+printf("%d\n%d\n%d\n",a,o,x);
+}
+int main()
+{
+    int n,k; 
+    scanf("%d%d",&n,&k); 
+    calculate_the_max(n,k);
+}
+```
 //type your code here
 
 Output:
+![image](https://github.com/user-attachments/assets/d635c774-d5e0-4102-bcb7-a4dea28f8f54)
+
 //paste your output here
 
 Result:
@@ -59,9 +125,47 @@ Algorithm:
 5.	Use a for loop to iterate over the queries.
  
 Program:
+```
+#include<stdio.h> 
+int main()
+{
+    int noshel,noque; 
+    scanf("%d%d",&noshel,&noque); 
+    int shelarr[noshel][noshel];
+    int nobookarr[noshel]; 
+    int k=0,c=0;
+    for(int i=0;i<noque;i++)
+    {
+        int queno; 
+        scanf("%d",&queno);
+        if(queno==1)
+        {
+            int shelno,nopage;
+            scanf("%d%d",&shelno,&nopage);
+            shelarr[shelno][k]=nopage; 
+            nobookarr[shelno]=c+=1;
+            k=k+1;         
+        }
+        else if(queno==2)
+        {
+            int pshelno,pbookno;
+            scanf("%d%d",&pshelno,&pbookno); 
+            printf("%d",shelarr[pshelno][pbookno]);   
+        }
+        else if(queno==3)
+        {
+            int ppshelno;
+            scanf("%d",&ppshelno); 
+            printf("%d",nobookarr[ppshelno]);
+        }
+    }
+}
+```
 //type your code here
 
 Output:
+![image](https://github.com/user-attachments/assets/92418ea0-0967-4169-8fa0-807ad78caf8d)
+
 //paste your output here
 
 
@@ -86,9 +190,27 @@ Algorithm:
 
 
 Program:
+```
+#include<stdio.h>
+int main()
+{
+    int n; scanf("%d",&n);
+    int a[n];
+    int sum=0;
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+        sum=sum+a[i];
+        
+    }
+    printf("%d",sum);
+}
+```
 //type your code here
 
 Output:
+![image](https://github.com/user-attachments/assets/04dad6a4-03cd-4651-8f62-775474d8a3f7)
+
 //paste your output here
 
  
@@ -120,9 +242,29 @@ o	If a character is not a space, it may belong to a word. If it's the first non-
 
 
 Program:
+```
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char str[100];
+    fgets(str,sizeof(str),stdin);
+    int len=sizeof(str);
+    int count=1;
+     for(int i=0;i<len-1;i++){
+         if(str[i]==' ')
+         count++;
+         
+     }
+     printf("Total number of words in the string is :%d",count);
+    return 0;
+}
+```
 //type your code here
 
 Output:
+![image](https://github.com/user-attachments/assets/1bb664b5-fb0d-445f-9ccf-b784a4ca5bbd)
+
 //paste your output here
 
 
