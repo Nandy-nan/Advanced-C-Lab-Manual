@@ -15,6 +15,28 @@ Else
 6.	Return 0
  
 Program:
+#include<stdio.h>
+typedef struct eligibile
+{
+    int age;
+    char name[50];
+}e;
+int main()
+{
+    e e1;
+    scanf("%d %s",&e1.age,e1.name);
+    printf("Age:%d\n",e1.age);
+    printf("Name:%svaccine:%d\n",e1.name,e1.age);
+    if(e1.age>18)
+    {
+        printf("eligibility:yes");
+    }
+    else
+    {
+        printf("eligibility:no");
+    }
+return 0;
+}
 
 //type your code here
 
@@ -43,6 +65,22 @@ Algorithm:
 7.	Return 0
  
 Program:
+#include<stdio.h> struct numbers
+{
+int a; int b;
+}n;
+int add(struct numbers n); int main()
+{
+
+scanf("%d %d ",&n.a,&n.b);
+printf("%d",add(n));
+}
+int add(struct numbers n)
+{
+return n.a+n.b;
+}
+
+
 
 //type your code here
 
@@ -50,6 +88,8 @@ Program:
 
 
 Output:
+![image](https://github.com/user-attachments/assets/5014591d-f77b-4c80-be53-be314e9e6441)
+
 
 
 //paste your output here
@@ -85,6 +125,21 @@ Use scanf to input the file name into the name array.
 5.	Return 0 to indicate successful program execution.
  
 Program:
+#include <stdio.h>
+#include<string.h>
+int main()
+{
+    FILE *fp;
+    char s[50];
+    scanf("%s",s);
+    printf("%s File Created Successfully\n",s);
+    fp=fopen(s,"w");
+    printf("%s File Opened\n",s);
+    fclose(fp);
+    printf("%s File Closed",s);
+    
+    
+}
 
 //type your code here
 
@@ -92,6 +147,8 @@ Program:
 
 
 Output:
+![image](https://github.com/user-attachments/assets/82d87975-bd0e-4e4f-abd6-b2474207a258)
+
 
 
 //paste your output here
@@ -132,6 +189,29 @@ Use scanf to input the file name into the name array and the number of strings i
 5.	Return 0 to indicate successful program execution.
  
 Program:
+#include <stdio.h>
+
+int main() {
+    char filename[100];
+    FILE *file;
+    int n, roll_number;
+    scanf("%s", filename);
+    file = fopen(filename, "w");
+    if (file!= NULL) {
+        printf("%s Opened\n",filename);
+    }
+    scanf("%d", &n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &roll_number);
+        fprintf(file, "%d\n", roll_number);
+    }
+
+    fclose(file);
+    printf("Data added Successfully\n");
+    
+    return 0;
+}
+
 
 //type your code here
 
@@ -139,6 +219,8 @@ Program:
 
 
 Output:
+![image](https://github.com/user-attachments/assets/b6bd6b8f-1d8e-4819-9dc1-4bfeaa815cf8)
+
 
 
 //paste your output here
@@ -186,6 +268,39 @@ Algorithm:
 13.End the program by returning 0.
 
 Program:
+#include <stdio.h>
+#include <stdlib.h>
+struct Subject
+{
+    char name[20];
+    int marks;
+};
+int main()
+{
+    int i,n;
+    scanf("%d",&n);
+    struct Subject *s = (struct Subject *)malloc(n*sizeof(struct Subject));
+    if(s==NULL)
+    {
+        printf("Memory Alocation Failed\n");
+        return 1;
+    }
+    for(i=0;i<n;i++)
+    {
+        scanf("%s %d",s[i].name,&s[i].marks);
+    }
+    for(i=0;i<n;i++)
+    {
+        printf("%s  %d\n",s[i].name,s[i].marks);
+    }
+    
+    free (s);
+    
+    return 0;
+}
+
+
+
 
 //type your code here
 
@@ -193,6 +308,8 @@ Program:
 
 
 Output:
+![image](https://github.com/user-attachments/assets/de7252dc-1c70-4b62-9606-b13ff8f5b7da)
+
 
 
 //paste your output here
