@@ -15,6 +15,7 @@ Else
 6.	Return 0
  
 Program:
+```
 #include<stdio.h>
 typedef struct eligibile
 {
@@ -37,6 +38,7 @@ int main()
     }
 return 0;
 }
+```
 
 //type your code here
 
@@ -65,6 +67,7 @@ Algorithm:
 7.	Return 0
  
 Program:
+```
 #include<stdio.h> struct numbers
 {
 int a; int b;
@@ -79,6 +82,7 @@ int add(struct numbers n)
 {
 return n.a+n.b;
 }
+```
 
 
 
@@ -125,6 +129,7 @@ Use scanf to input the file name into the name array.
 5.	Return 0 to indicate successful program execution.
  
 Program:
+```
 #include <stdio.h>
 #include<string.h>
 int main()
@@ -142,6 +147,7 @@ int main()
 }
 
 //type your code here
+```
 
 
 
@@ -189,6 +195,7 @@ Use scanf to input the file name into the name array and the number of strings i
 5.	Return 0 to indicate successful program execution.
  
 Program:
+```
 #include <stdio.h>
 
 int main() {
@@ -211,6 +218,7 @@ int main() {
     
     return 0;
 }
+```
 
 
 //type your code here
@@ -268,6 +276,7 @@ Algorithm:
 13.End the program by returning 0.
 
 Program:
+```
 #include <stdio.h>
 #include <stdlib.h>
 struct Subject
@@ -298,6 +307,7 @@ int main()
     
     return 0;
 }
+```
 
 
 
