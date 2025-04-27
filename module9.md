@@ -12,10 +12,22 @@ Algorithm:
 7.	Use the display function to visualize the stack's contents
  
 Program:
+```
+int stack[40],top,i;
+ void display()
+{
+    for(i=top;i>=0;i--)
+       {
+           printf("%d\n",stack[i]);
+       }
+}
+```
 
 //type your code here
 
 Output:
+
+![image](https://github.com/user-attachments/assets/875be496-bca0-44ab-8165-abf11698bccf)
 
 //paste your output here
 
@@ -35,10 +47,30 @@ Algorithm:
 4.	Call the push function as needed.
  
 Program:
+```
+int size=3,top=1;
+float stack[40];
+void push (float data)
+{
+    if (top==size-1 )
+    {
+        printf("stack is full\n");      
+    }
+    else
+    {
+        top ++;
+        stack[top] = data;
+    }
+}
+```
+
 
 //type your code here
 
 Output:
+![image](https://github.com/user-attachments/assets/35b39d9e-009e-4440-91b6-e6560d91db2a)
+
+
 
 //paste your output here
 
@@ -61,10 +93,30 @@ Algorithm:
 4.	Call the display function and perform other queue operations as needed.
  
 Program:
+```
+int queue[50], rear, front,i;
+void display()
+{
+    if(front==-1)
+    {
+        printf("No elements to display");     
+    }
+    else
+    {
+        for(i=front;i<=rear;i++)
+        {
+            printf("%d ",queue[i]);    
+        }  
+    }
+}
+```
+
 
 //type your code here
 
 Output:
+![image](https://github.com/user-attachments/assets/9bd552d1-c572-4ce9-8a92-4360d37b01bf)
+
 
 //paste your output here
 
@@ -85,10 +137,29 @@ Algorithm:
 4.	Call the enqueue function as needed.
 
 Program:
+```
+int size=4, rear=-1, front=-1; 
+float queue[50];
+void enqueue(float data)
+{
+    if(rear<size)
+    {
+        if(front==-1)
+        {
+            front=0;
+        }
+        rear=rear+1;
+        queue[rear]=data;
+        
+    }
+}
+```
 
 //type your code here
 
 Output:
+![image](https://github.com/user-attachments/assets/6c292513-812f-4c8f-bc60-7bfa6c979ec5)
+
 
 //paste your output here
 
@@ -120,10 +191,28 @@ o	After deletion, check if the front pointer has passed the rear pointer (front 
 
 
 Program:
-
+```
+int size=4, rear=-1, front=-1; 
+float queue[50];
+void enqueue(float data)
+{
+    if(rear<size)
+    {
+        if(front==-1)
+        {
+            front=0;
+        }
+        rear=rear+1;
+        queue[rear]=data;
+        
+    }
+}
+```
 //type your code here
 
 Output:
+![image](https://github.com/user-attachments/assets/7f3ec850-6c69-4da1-8908-362790af0bfb)
+
 
 //paste your output here
 
