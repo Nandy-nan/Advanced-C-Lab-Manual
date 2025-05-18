@@ -14,10 +14,29 @@ Algorithm:
 7.	Move to the next node using the next pointer.
  
 Program:
+```
+struct Node   
+{  
+float data;  
+struct Node *next;  
+}*head;  
+void display()  
+{ 
+    struct Node *current=head;
+    while(current!=NULL)
+    {
+        printf("%.2f\n",current->data);
+        current=current->next;
+    }
+}
+```
+
 
 //type your code here
 
 Output:
+![image](https://github.com/user-attachments/assets/443f4054-6a3c-495c-8ddd-7c2b6c94af97)
+
 
 //paste your output here
 
@@ -39,10 +58,31 @@ Algorithm:
 4.	Set head to point to the next node in the stack.
  
 Program:
+```
+struct Node   
+{  
+float data;  
+struct Node *next;  
+}*head;  
+void pop()  
+{ 
+    if(head!=0)
+    {
+        head=head->next;
+    }
+    else
+    {
+        printf("stack is empty");
+    }
+}
+```
+
 
 //type your code here
 
 Output:
+![image](https://github.com/user-attachments/assets/f85a3cb3-c9f4-47a7-8d9b-3baea287a805)
+
 
 //paste your output here
 
@@ -63,10 +103,37 @@ Algorithm:
 5.	End the display function.
  
 Program:
+```
+struct Node
+{
+   int data;
+   struct Node *next;
+}*front=NULL,*rear=NULL;
+void display()
+{
+ struct Node *current=front;
+ if(current==NULL)
+ {
+     printf("queue is empty");
+ }
+ else
+ {
+ printf("queue elements:\n");
+ while(current!=NULL)
+{
+    
+   printf("%c\n",current->data);
+   current=current->next;
+}
+}
+}
+```
 
 //type your code here
 
 Output:
+![image](https://github.com/user-attachments/assets/4ed6314c-a55c-45a1-ae8c-fca4a11e9968)
+
 
 //paste your output here
 
@@ -89,10 +156,34 @@ Algorithm:
 6.	End of Enqueue Operation
  
 Program:
+```
+struct Node
+{
+   int data;
+   struct Node *next;
+}*front=NULL,*rear=NULL;
+void enqueue(int data)
+{
+    struct Node *current = (struct Node*)malloc(sizeof(struct Node));
+    current->data = data;
+    current->next = NULL;
 
+    if (front == NULL)
+    {
+        front = rear = current;
+    }
+    else
+    {
+        rear->next = current;
+        rear = current;
+    }
+}
+```
 //type your code here
 
 Output:
+![image](https://github.com/user-attachments/assets/c7d1805b-2710-47a9-a902-778f0f72d1fd)
+
 
 //paste your output here
 
@@ -116,10 +207,30 @@ o	If the queue is empty (i.e., the front pointer is NULL), return an error or a 
 o	If the queue is not empty, return the data stored in the front node of the linked list (i.e., the element at the head of the queue).
 
 Program:
+```
+struct Node
+{
+   float data;
+   struct Node *next;
+}*front=NULL,*rear=NULL;
+void peek()
+{
+    if(front==NULL)
+    {
+        printf("queue is empty");
+    }
+    else
+    {
+        printf("%.2f",front->data);
+    }
+}
+```
 
 //type your code here
 
 Output:
+![image](https://github.com/user-attachments/assets/cd3baf06-6909-4a61-a40f-9b17dff0b81b)
+
 
 //paste your output here
 
